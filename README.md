@@ -166,6 +166,11 @@ ESP32-Cattle-Rumination-Monitoring
 │   ├── PCB_Design.md
 │   ├── Results.md
 │   └── References.md
+|   └── papers/
+|      ├── paper_1.pdf
+|      ├── paper_2.pdf
+|      └── paper_3.pdf
+|
 │
 ├── firmware
 │   └── rumination_monitoring.ino
@@ -194,10 +199,10 @@ Detailed project documentation is available below:
 
 ### Technical Documentation
 
-- 📖 [Methodology](docs/Methodology.md)
-- 🔧 [PCB Design Report](docs/PCB_Design.md)
-- 📊 [Experimental Results](docs/Results.md)
-- 📚 [Research References](docs/References.md)
+- 📖 [Methodology](Docs/Methodology.md)
+- 🔧 [PCB Design Report](Docs/PCB_Design.md)
+- 📊 [Experimental Results](Docs/Results.md)
+- 📚 [Research References](Docs/References.md)
 
 ---
 
