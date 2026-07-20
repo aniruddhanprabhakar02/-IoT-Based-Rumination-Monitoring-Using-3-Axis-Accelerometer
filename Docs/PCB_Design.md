@@ -2,7 +2,7 @@
 
 ## Overview
 
-To improve hardware integration and gain practical PCB design experience, a custom PCB was designed for the ESP32-based cattle rumination monitoring system using KiCad.
+To improve hardware integration and gain practical PCB design experience, a custom PCB was designed for the ESP32-based cattle rumination monitoring system using **KiCad**.
 
 The design integrates:
 
@@ -11,15 +11,15 @@ The design integrates:
 - DS18B20 Temperature Sensor
 - NEO-6M GPS Module
 
-> Note: The deployed cattle monitoring system was implemented using a perfboard prototype. The PCB presented here was developed as a fabrication-ready prototype design and was not manufactured.
+> **Note:** The deployed cattle monitoring system was implemented using a perfboard prototype. The PCB presented here was developed as a fabrication-ready prototype design and was **not manufactured**.
 
 ---
 
-## Schematic Design
+# Schematic Design
 
 The schematic was developed based on the firmware architecture and peripheral interface requirements.
 
-### Interfaces
+## Hardware Interfaces
 
 | Module | Interface | ESP32 Pins |
 |----------|----------|----------|
@@ -28,88 +28,137 @@ The schematic was developed based on the firmware architecture and peripheral in
 | NEO-6M GPS | UART | GPIO16 (RX), GPIO17 (TX) |
 
 <p align="center">
-  <img src="../hardware/schematic/schematic.png" width="850">
+  <img src="../images/pcb/schematic_diagram.png" width="900">
 </p>
+
+The schematic defines the electrical connectivity between the ESP32 and peripheral modules while ensuring reliable communication through I²C, UART, and One-Wire interfaces.
 
 ---
 
-## PCB Layout
+# PCB Layout
 
-### PCB Specifications
+The PCB layout was designed with emphasis on compact routing, signal integrity, and ease of hardware integration.
+
+## PCB Specifications
 
 | Parameter | Value |
 |------------|------------|
-| Length | 55 mm |
-| Width | 85 mm |
-| Design Tool | KiCad |
+| PCB Length | 55 mm |
+| PCB Width | 85 mm |
+| Design Software | KiCad |
 
-### Design Considerations
+## Design Considerations
 
-- Central placement of ESP32 for simplified routing
+- Central placement of the ESP32 for simplified routing
 - Short I²C traces between ESP32 and MPU6050
-- Ground plane for noise reduction
+- Dedicated ground plane for noise reduction
 - GPS antenna clearance
 - ESP32 antenna keep-out region
 
 <p align="center">
-  <img src="../hardware/pcb_layout/pcb_layout.png" width="850">
+  <img src="../images/pcb/pcb_design_layout.png" width="900">
 </p>
+
+### PCB Dimensions
+
+<table align="center">
+<tr>
+<td align="center">
+
+**Length (55 mm)**
+
+<img src="../images/pcb/pcb_dimension_length_55mm.png" width="320">
+
+</td>
+
+<td align="center">
+
+**Width (85 mm)**
+
+<img src="../images/pcb/pcb_dimension_width_85mm.png" width="320">
+
+</td>
+</tr>
+</table>
 
 ---
 
-## Custom Library Development
+# Custom Library Development
 
-Custom KiCad libraries were created for:
+Since standard KiCad libraries did not include all required modules, custom symbols and footprints were created using component datasheets.
 
-### Custom Symbols
+## Custom Symbols
 
-- MPU6050
-- NEO-6M GPS
-
-### Custom Footprints
-
-- MPU6050
-- NEO-6M GPS
-
-These libraries were developed using datasheet dimensions and pin mappings to ensure correct schematic representation and PCB placement.
+### MPU6050 Symbol
 
 <p align="center">
-  <img src="../hardware/custom_symbols/neo6m_symbol.png" width="650">
+  <img src="../images/pcb/mpu6050_custom_symbol.png" width="650">
 </p>
 
+### NEO-6M GPS Symbol
+
 <p align="center">
-  <img src="../hardware/custom_footprints/neo6m_footprint.png" width="650">
+  <img src="../images/pcb/neo6m_custom_symbol.png" width="650">
 </p>
+
+The custom symbols accurately define device pin assignments for schematic capture.
 
 ---
 
-## Design Outcomes
+## Custom Footprints
 
-### PCB Design Activities Performed
+### MPU6050 Footprint
+
+<p align="center">
+  <img src="../images/pcb/mpu6050_custom_footprint.png" width="650">
+</p>
+
+### NEO-6M GPS Footprint
+
+<p align="center">
+  <img src="../images/pcb/neo6m_custom_footprint.png" width="650">
+</p>
+
+The footprints were created using the physical package dimensions provided in the respective component datasheets to ensure correct PCB placement.
+
+---
+
+# Design Outcomes
+
+The following PCB design activities were successfully completed:
 
 - Schematic Capture
+- Custom Symbol Development
+- Custom Footprint Development
 - PCB Layout Design
 - Component Placement
-- Trace Routing
+- Signal Trace Routing
 - Ground Plane Implementation
 - ESP32 Antenna Keep-Out Planning
-- Custom Symbol Creation
-- Custom Footprint Development
+- Design Rule Verification
 - Gerber File Generation
-
-### Tools Used
-
-- KiCad
-- ESP32-WROOM-32
-- MPU6050
-- DS18B20
-- NEO-6M GPS
 
 ---
 
-## Future Work
+# Tools and Components
+
+## Software
+
+- KiCad
+
+## Hardware Components
+
+- ESP32-WROOM-32
+- MPU6050 Accelerometer
+- DS18B20 Temperature Sensor
+- NEO-6M GPS Module
+
+---
+
+# Future Work
 
 - PCB Fabrication
-- Hardware Assembly
-- Prototype Validation
-- Compact Wearable Enclosure Design
+- Component Assembly
+- Hardware Validation
+- Power Optimization
+- Miniaturized Wearable Enclosure

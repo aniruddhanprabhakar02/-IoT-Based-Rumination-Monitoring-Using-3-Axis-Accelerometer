@@ -1,26 +1,35 @@
 # IoT-Based Cattle Rumination Monitoring and Health Analysis System
 
+![Platform](https://img.shields.io/badge/Platform-ESP32-blue)
+![Language](https://img.shields.io/badge/Language-C%2B%2B-orange)
+![IDE](https://img.shields.io/badge/IDE-Arduino-green)
+![PCB](https://img.shields.io/badge/PCB-KiCad-success)
+![IoT](https://img.shields.io/badge/IoT-Blynk-purple)
+![Cloud](https://img.shields.io/badge/Cloud-Google%20Sheets-brightgreen)
+![Status](https://img.shields.io/badge/Status-Field%20Tested-success)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 <p align="center">
-  <img src="images/field_testing/cow_deployment_1.jpg" alt="Cattle Monitoring System" width="750">
+  <img src="Images/deployment/live_monitoring_and_data_logging.jpeg" alt="IoT-Based Cattle Rumination Monitoring System" width="850">
 </p>
 
 ## Project Overview
 
-This project presents an IoT-based cattle monitoring system designed to monitor rumination behavior, body temperature, and location of cattle in real time.
+This project presents an IoT-based cattle monitoring system designed to monitor rumination behavior, body temperature, and cattle location in real time.
 
-The system uses an ESP32 microcontroller integrated with an MPU6050 accelerometer, DS18B20 temperature sensor, and NEO-6M GPS module. Accelerometer signals are processed using digital signal processing techniques to estimate chewing activity and classify rumination behavior. Data is visualized through a Blynk IoT dashboard and logged to Google Sheets for long-term analysis.
+The system uses an **ESP32-WROOM-32** microcontroller integrated with an **MPU6050 accelerometer**, **DS18B20 temperature sensor**, and **NEO-6M GPS module**. Accelerometer signals are processed using digital signal processing techniques to estimate chewing activity and classify rumination behavior. The processed data is visualized through a **Blynk IoT dashboard** and logged to **Google Sheets** for long-term monitoring and analysis.
 
 ### Applications
 
 - Livestock Health Monitoring
-- Early Disease Detection
-- Heat Stress Monitoring
 - Precision Livestock Farming
 - Behavioral Analytics
+- Early Disease Detection
+- Heat Stress Monitoring
 
 ---
 
-## Key Features
+# Key Features
 
 - Real-time rumination monitoring
 - Jaw movement sensing using MPU6050
@@ -37,44 +46,17 @@ The system uses an ESP32 microcontroller integrated with an MPU6050 acceleromete
 
 ---
 
-## System Architecture
+# System Workflow
 
 <p align="center">
-  <img src="images/workflow/system_architecture.png" width="800">
+  <img src="images/workflow/system_workflow_cattle.png" width="850">
 </p>
 
-### Data Flow
-
-```text
-MPU6050
-   │
-   ▼
-Acceleration Magnitude
-   │
-   ▼
-Signal Filtering
-   │
-   ▼
-Peak Detection
-   │
-   ▼
-CPM + CV Analysis
-   │
-   ▼
-Rumination Classification
-   │
-   ▼
-ESP32
-   │
-   ├── Blynk Dashboard
-   ├── Google Sheets Logging
-   ├── Temperature Monitoring
-   └── GPS Tracking
-```
+The firmware continuously acquires accelerometer data, applies digital filtering, detects chewing events, computes behavioral metrics (CPM and CV), classifies rumination activity, and uploads the processed information to cloud platforms for visualization and storage.
 
 ---
 
-## Hardware Components
+# Hardware Components
 
 | Component | Purpose |
 |------------|----------|
@@ -87,74 +69,54 @@ ESP32
 
 ---
 
-## Field Deployment
-
-The developed system was deployed and tested on live cattle under farm conditions.
+# Hardware Prototype
 
 <p align="center">
-  <img src="images/field_testing/cow_deployment_1.jpg" width="700">
-</p>
-
-### Validation Performed
-
-- Real-time chewing detection
-- Rumination classification
-- Cloud logging
-- Dashboard visualization
-- End-to-end system testing
-
----
-
-## Hardware Prototype
-
-<p align="center">
-  <img src="images/hardware/prototype_board.jpg" width="700">
+  <img src="images/hardware/prototype_board.png" width="700">
 </p>
 
 The prototype integrates:
 
-- ESP32
-- MPU6050
-- DS18B20
-- NEO-6M GPS
+- ESP32-WROOM-32
+- MPU6050 Accelerometer
+- DS18B20 Temperature Sensor
+- NEO-6M GPS Module
 - Battery Power Supply
 
 ---
 
-## Dashboard Screenshots
-
-### Blynk IoT Dashboard
+# IoT Dashboard
 
 <p align="center">
-  <img src="images/dashboard/blynk_dashboard_1.jpg" width="750">
+  <img src="images/dashboard/blynk_dashboard_1.png" width="750">
 </p>
 
-The dashboard displays:
+The Blynk dashboard provides real-time visualization of:
 
 - Chews Per Minute (CPM)
 - Coefficient of Variation (CV)
 - Rumination Status
 - Temperature
 - Total Chew Count
-- GPS Data
+- GPS Location
 
 ---
 
-## Results Summary
+# Results Summary
 
-The developed system successfully:
+The developed system successfully demonstrated:
 
-- Detected chewing events
-- Estimated chewing frequency
-- Computed chewing regularity
-- Classified rumination behavior
-- Logged sensor data to cloud platforms
-- Visualized real-time animal activity
-- Demonstrated successful field deployment
+- Real-time chewing detection
+- Rumination behavior classification
+- Continuous temperature monitoring
+- GPS-based cattle tracking
+- Cloud data logging using Google Sheets
+- Real-time dashboard visualization
+- Successful deployment on live cattle
 
 ---
 
-## Repository Structure
+# Repository Structure
 
 ```text
 ESP32-Cattle-Rumination-Monitoring
@@ -165,48 +127,50 @@ ESP32-Cattle-Rumination-Monitoring
 │   ├── Methodology.md
 │   ├── PCB_Design.md
 │   ├── Results.md
-│   └── References.md
-|   └── papers/
-|      ├── paper_1.pdf
-|      ├── paper_2.pdf
-|      └── paper_3.pdf
-|
+│   ├── References.md
+│   └── papers/
+│       ├── paper_1.pdf
+│       ├── paper_2.pdf
+│       └── paper_3.pdf
 │
 ├── firmware
 │   └── rumination_monitoring.ino
 │
 ├── hardware
-│   ├── schematic
-│   ├── pcb_layout
-│   ├── custom_symbols
-│   ├── custom_footprints
-│   └── gerber_files
+│   ├── schematic/
+│   ├── pcb_layout/
+│   ├── custom_symbols/
+│   ├── custom_footprints/
+│   └── gerber_files/
 │
 ├── images
+│   ├── hardware/
+│   ├── deployment/
+│   ├── dashboard/
+│   ├── workflow/
+│   └── pcb/
 │
-├── videos
+├── videos/
 │
-├── data
+├── data/
 │
 └── LICENSE
 ```
 
 ---
 
-## Documentation
+# Documentation
 
 Detailed project documentation is available below:
 
-### Technical Documentation
-
-- 📖 [Methodology](Docs/Methodology.md)
-- 🔧 [PCB Design Report](Docs/PCB_Design.md)
-- 📊 [Experimental Results](Docs/Results.md)
-- 📚 [Research References](Docs/References.md)
+- 📖 [Methodology](docs/Methodology.md)
+- 🔧 [PCB Design Report](docs/PCB_Design.md)
+- 📊 [Experimental Results](docs/Results.md)
+- 📚 [Research References](docs/References.md)
 
 ---
 
-## Technologies Used
+# Technologies Used
 
 ### Hardware
 
@@ -220,7 +184,7 @@ Detailed project documentation is available below:
 - Arduino IDE
 - KiCad
 - Blynk IoT
-- Google Sheets API
+- Google Sheets
 
 ### Concepts
 
@@ -234,21 +198,21 @@ Detailed project documentation is available below:
 
 ---
 
-## Future Enhancements
+# Future Enhancements
 
-- Machine Learning Based Rumination Detection
+- Machine Learning-Based Rumination Detection
 - Health Anomaly Detection
-- Heat Stress Monitoring
-- LoRa-Based Communication
+- Heat Stress Prediction
+- LoRa-Based Long-Range Communication
 - Solar-Powered Sensor Node
-- PCB Fabrication and Miniaturization
+- Custom PCB Fabrication and Miniaturization
 
 ---
 
-## Author
+# Author
 
 **Aniruddhan P**
 
-M.E. Embedded Systems and Technologies
+*M.E. Embedded Systems and Technologies*
 
-Embedded Systems | Embedded Linux | IoT | Edge AI
+**Embedded Systems | Embedded Linux | IoT | Edge AI**

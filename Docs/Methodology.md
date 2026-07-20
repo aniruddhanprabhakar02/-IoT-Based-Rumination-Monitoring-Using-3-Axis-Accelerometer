@@ -383,6 +383,28 @@ This enables long-term behavioral analysis and record keeping.
 
 # 11. System Workflow
 
+The following workflow illustrates the complete data acquisition, signal processing, rumination classification, and cloud communication pipeline implemented in the developed system.
+
+<p align="center">
+  <img src="../images/workflow/system_workflow_cattle.png" alt="System Workflow" width="850">
+</p>
+
+### Workflow Description
+
+1. The ESP32 initializes the sensors and establishes a Wi-Fi connection.
+2. The MPU6050 continuously acquires jaw movement acceleration data at 25 Hz.
+3. The acceleration magnitude is computed from the three-axis measurements.
+4. High-pass and low-pass digital filters remove unwanted motion artifacts and sensor noise.
+5. The filtered signal is stored in a 4-second analysis window.
+6. Peak detection identifies individual chewing events.
+7. Chews Per Minute (CPM) and Coefficient of Variation (CV) are computed.
+8. Rumination behavior is classified using the predefined CPM and CV thresholds.
+9. Body temperature is measured using the DS18B20 sensor.
+10. GPS coordinates are acquired from the NEO-6M module.
+11. All processed information is transmitted to the Blynk dashboard and logged to Google Sheets for remote monitoring and long-term analysis.
+
+### Processing Pipeline
+
 ```text
 System Power ON
        │
@@ -428,8 +450,6 @@ Upload to Cloud
        ▼
 Repeat
 ```
-
----
 
 # 12. System Innovations
 

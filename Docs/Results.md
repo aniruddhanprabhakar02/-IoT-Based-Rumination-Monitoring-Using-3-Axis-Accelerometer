@@ -2,164 +2,156 @@
 
 ## Overview
 
-The developed cattle monitoring system was experimentally evaluated under real-world farm conditions. The system was deployed on cattle and successfully monitored jaw movement, estimated chewing activity, classified rumination behavior, and transmitted data to cloud platforms for visualization and logging.
+The developed IoT-based cattle monitoring system was experimentally evaluated under real-world farm conditions. The system successfully acquired jaw movement data, estimated chewing activity, classified rumination behavior, monitored body temperature, and transmitted data to cloud platforms for real-time visualization and long-term logging.
 
 ---
 
-## Hardware Prototype
+# Hardware Prototype
 
-The complete system was assembled using a perfboard-based prototype integrating the ESP32, MPU6050 accelerometer, DS18B20 temperature sensor, and NEO-6M GPS module.
+The complete system was implemented using a **perfboard-based hardware prototype** integrating the ESP32-WROOM-32, MPU6050 accelerometer, DS18B20 temperature sensor, and NEO-6M GPS module.
 
 <p align="center">
-  <img src="../images/hardware/prototype_board.jpg" width="700">
+  <img src="../images/hardware/prototype_board.png" width="700">
 </p>
 
 ### Prototype Features
 
-- ESP32-based data acquisition
-- Wireless cloud connectivity
-- Accelerometer-based jaw motion sensing
-- Temperature monitoring
-- GPS tracking capability
-- Battery-powered operation
+- ESP32-based embedded controller
+- Wireless Wi-Fi connectivity
+- MPU6050 jaw motion sensing
+- DS18B20 temperature monitoring
+- GPS-based cattle tracking
+- Battery-powered portable operation
 
 ---
 
-## Field Deployment
+# Field Deployment
 
-The system was deployed on live cattle to evaluate rumination monitoring performance under actual farm conditions.
+The developed system was deployed on live cattle to evaluate rumination monitoring under actual farm conditions.
 
 <p align="center">
-  <img src="../images/field_testing/cow_deployment_1.jpg" width="700">
+  <img src="../images/deployment/sensor_mounting_on_cow.jpeg" width="650">
 </p>
 
-### Deployment Objectives
+### Sensor Placement
 
-- Validate jaw motion sensing
-- Evaluate rumination detection
-- Test wireless connectivity
-- Verify cloud data logging
-- Assess real-time dashboard visualization
+The sensing unit was securely mounted near the mandibular (jaw) region to capture chewing-induced movements while minimizing interference from general body motion.
 
 ---
 
-## Blynk Dashboard Visualization
+## Live Monitoring and Data Logging
 
-The processed sensor data was transmitted to the Blynk IoT platform for real-time monitoring.
+The complete monitoring system was validated by simultaneously observing cattle behavior, the Blynk dashboard, and cloud-based data logging.
 
 <p align="center">
-  <img src="../images/dashboard/blynk_dashboard_1.jpg" width="750">
+  <img src="../images/deployment/live_monitoring_and_data_logging.jpeg" width="850">
+</p>
+
+### Experimental Validation
+
+The deployment verified:
+
+- Real-time jaw movement acquisition
+- Continuous rumination monitoring
+- Wireless data transmission
+- Cloud-based data logging
+- End-to-end system operation under field conditions
+
+---
+
+# Blynk Dashboard Visualization
+
+The processed sensor data was transmitted to the Blynk IoT platform for remote monitoring and visualization.
+
+<p align="center">
+  <img src="../images/dashboard/blynk_dashboard_1.png" width="750">
 </p>
 
 ### Dashboard Parameters
+
+The dashboard displays:
 
 - Chews Per Minute (CPM)
 - Coefficient of Variation (CV)
 - Rumination Status
 - Total Chew Count
-- Temperature
+- Body Temperature
 - GPS Location
 
 ---
 
-## Cloud Data Logging
+# Experimental Observations
 
-Sensor data was uploaded to Google Sheets using HTTP POST requests.
+The experimental evaluation demonstrated that the developed system successfully:
 
-### Logged Parameters
-
-| Parameter | Description |
-|------------|------------|
-| CPM | Chews Per Minute |
-| CV | Coefficient of Variation |
-| Rumination Label | Activity Classification |
-| Rumination Count | Detected Rumination Events |
-| Total Chews | Cumulative Chew Count |
-| Peak Amplitude | Peak Signal Magnitude |
-| Temperature | Body Temperature |
-
-<p align="center">
-  <img src="../images/results/google_sheets_logging.png" width="850">
-</p>
+- Acquired continuous accelerometer data from jaw movements
+- Performed real-time digital signal processing on the ESP32
+- Detected chewing events using peak detection
+- Estimated chewing frequency (CPM)
+- Evaluated chewing regularity using CV
+- Classified rumination behavior using embedded firmware
+- Monitored body temperature
+- Uploaded sensor data to cloud platforms
+- Visualized animal activity using the Blynk dashboard
+- Successfully operated during live cattle deployment
 
 ---
 
-## Sample Logged Data
+# System Validation
 
-| CPM | CV | Label |
-|------|------|------|
-| 120 | 0.753 | Rumination |
-| 135 | 0.640 | Rumination |
-| 60 | 0.328 | Rumination |
-| 15 | 1.000 | Other |
-| 90 | 0.560 | Rumination |
+The project validates the integration of embedded sensing, digital signal processing, and IoT technologies for livestock health monitoring.
 
-These observations demonstrate the system's ability to differentiate rhythmic chewing activity from non-rumination behaviors.
+## Embedded System Validation
 
----
-
-## Experimental Observations
-
-### Successful Outcomes
-
-- Continuous IMU data acquisition achieved
-- Real-time chewing event detection implemented
-- Rumination classification performed on-device
-- Temperature monitoring integrated successfully
-- Cloud telemetry established through Wi-Fi
-- Data visualization achieved using Blynk
-- Long-term logging implemented using Google Sheets
-- Successful field deployment on cattle
-
----
-
-## System Validation
-
-The project successfully demonstrated:
-
-### Embedded System Integration
-
-- ESP32 firmware development
+- ESP32 firmware implementation
 - Multi-sensor integration
 - Real-time signal processing
+- Embedded rumination classification
 
-### IoT Connectivity
+## IoT Validation
 
-- Wireless data transmission
-- Cloud-based visualization
-- Remote monitoring
+- Wi-Fi communication
+- Cloud telemetry
+- Remote dashboard visualization
+- Long-term data logging
 
-### Livestock Monitoring
+## Livestock Monitoring Validation
 
-- Rumination behavior tracking
+- Jaw movement sensing
+- Rumination behavior analysis
 - Temperature monitoring
-- Location tracking
+- GPS-based location tracking
 
 ---
 
-## Limitations
+# Limitations
 
-- Rule-based classification using fixed thresholds
-- GPS accuracy dependent on satellite visibility
-- Battery life optimization not extensively studied
-- PCB design was not fabricated and validated
+Current limitations of the prototype include:
+
+- Rule-based rumination classification using fixed thresholds
+- GPS accuracy dependent on satellite availability
+- Battery life optimization not extensively evaluated
+- PCB designed but not fabricated or experimentally validated
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-- Machine Learning-based behavior classification
+Potential enhancements include:
+
+- Machine Learning-based rumination classification
 - Automated health anomaly detection
+- Heat stress prediction
 - LoRa-based long-range communication
-- Solar-powered operation
-- Fabricated custom PCB implementation
-- Mobile alert generation
+- Solar-powered sensor node
+- Fabrication and validation of the custom PCB
+- Mobile notification and alert system
 
 ---
 
-## Demonstration Media
+# Demonstration Media
 
-Additional project demonstrations are available in:
+Additional demonstrations of the project are available in the repository:
 
 ```text
 /videos/
@@ -168,12 +160,12 @@ Additional project demonstrations are available in:
 Including:
 
 - Hardware Demonstration
-- Field Testing
+- Live Cattle Deployment
 - Dashboard Monitoring
 - Cloud Data Logging
 
 ---
 
-## Conclusion
+# Conclusion
 
-The developed IoT-based cattle monitoring system successfully demonstrated real-time rumination monitoring, temperature sensing, cloud connectivity, and field deployment. The results validate the feasibility of using low-cost embedded sensing and signal processing techniques for livestock health monitoring applications.
+The developed IoT-based cattle rumination monitoring system successfully demonstrated real-time jaw movement sensing, rumination classification, temperature monitoring, cloud connectivity, and remote visualization. The successful field deployment validates the feasibility of using low-cost embedded sensing and digital signal processing techniques for precision livestock health monitoring.
