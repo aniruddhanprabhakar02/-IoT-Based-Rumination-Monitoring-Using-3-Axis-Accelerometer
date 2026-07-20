@@ -28,7 +28,7 @@ The schematic was developed based on the firmware architecture and peripheral in
 | NEO-6M GPS | UART | GPIO16 (RX), GPIO17 (TX) |
 
 <p align="center">
-  <img src="../images/pcb/schematic_diagram.png" width="900">
+  <img src="Images/pcb/Schematics diagram.png" width="900">
 </p>
 
 The schematic defines the electrical connectivity between the ESP32 and peripheral modules while ensuring reliable communication through I²C, UART, and One-Wire interfaces.
@@ -56,7 +56,7 @@ The PCB layout was designed with emphasis on compact routing, signal integrity, 
 - ESP32 antenna keep-out region
 
 <p align="center">
-  <img src="../images/pcb/pcb_design_layout.png" width="900">
+  <img src="Images/pcb/PCB Design Layout.png" width="900">
 </p>
 
 ### PCB Dimensions
@@ -67,7 +67,7 @@ The PCB layout was designed with emphasis on compact routing, signal integrity, 
 
 **Length (55 mm)**
 
-<img src="../images/pcb/pcb_dimension_length_55mm.png" width="320">
+<img src="Images/pcb/Designed PCB Dimensions , L=55mm.png" width="320">
 
 </td>
 
@@ -75,7 +75,7 @@ The PCB layout was designed with emphasis on compact routing, signal integrity, 
 
 **Width (85 mm)**
 
-<img src="../images/pcb/pcb_dimension_width_85mm.png" width="320">
+<img src="Images/pcb/Designed PCB Dimenions , width = 85mm.png" width="320">
 
 </td>
 </tr>
@@ -92,13 +92,13 @@ Since standard KiCad libraries did not include all required modules, custom symb
 ### MPU6050 Symbol
 
 <p align="center">
-  <img src="../images/pcb/mpu6050_custom_symbol.png" width="650">
+  <img src="Images/pcb/MPU6050 Custom Symbol Design.png" width="650">
 </p>
 
 ### NEO-6M GPS Symbol
 
 <p align="center">
-  <img src="../images/pcb/neo6m_custom_symbol.png" width="650">
+  <img src="Images/pcb/NEO-6M Custom Symbol Design.png" width="650">
 </p>
 
 The custom symbols accurately define device pin assignments for schematic capture.
@@ -110,13 +110,13 @@ The custom symbols accurately define device pin assignments for schematic captur
 ### MPU6050 Footprint
 
 <p align="center">
-  <img src="../images/pcb/mpu6050_custom_footprint.png" width="650">
+  <img src="Images/pcb/MPU6050 Custom Footprint .png" width="650">
 </p>
 
 ### NEO-6M GPS Footprint
 
 <p align="center">
-  <img src="../images/pcb/neo6m_custom_footprint.png" width="650">
+  <img src="Images/pcb/NEO-6M Custom Footprint.png" width="650">
 </p>
 
 The footprints were created using the physical package dimensions provided in the respective component datasheets to ensure correct PCB placement.

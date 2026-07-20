@@ -11,7 +11,7 @@ The developed IoT-based cattle monitoring system was experimentally evaluated un
 The complete system was implemented using a **perfboard-based hardware prototype** integrating the ESP32-WROOM-32, MPU6050 accelerometer, DS18B20 temperature sensor, and NEO-6M GPS module.
 
 <p align="center">
-  <img src="../images/hardware/prototype_board.png" width="700">
+  <img src="Images/hardware/prototype_board.png" width="700">
 </p>
 
 ### Prototype Features
@@ -30,7 +30,7 @@ The complete system was implemented using a **perfboard-based hardware prototype
 The developed system was deployed on live cattle to evaluate rumination monitoring under actual farm conditions.
 
 <p align="center">
-  <img src="../images/deployment/sensor_mounting_on_cow.jpeg" width="650">
+  <img src="Images/deployment/sensor_mounting_on_cow.jpeg" width="650">
 </p>
 
 ### Sensor Placement
@@ -44,7 +44,7 @@ The sensing unit was securely mounted near the mandibular (jaw) region to captur
 The complete monitoring system was validated by simultaneously observing cattle behavior, the Blynk dashboard, and cloud-based data logging.
 
 <p align="center">
-  <img src="../images/deployment/live_monitoring_and_data_logging.jpeg" width="850">
+  <img src="Images/deployment/live_monitoring_and_data_logging.jpeg" width="850">
 </p>
 
 ### Experimental Validation
@@ -64,7 +64,7 @@ The deployment verified:
 The processed sensor data was transmitted to the Blynk IoT platform for remote monitoring and visualization.
 
 <p align="center">
-  <img src="../images/dashboard/blynk_dashboard_1.png" width="750">
+  <img src="Images/dashboard/blynk_dashboard_1.png" width="750">
 </p>
 
 ### Dashboard Parameters
