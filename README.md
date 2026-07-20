@@ -49,7 +49,7 @@ The system uses an **ESP32-WROOM-32** microcontroller integrated with an **MPU60
 # System Workflow
 
 <p align="center">
-  <img src="images/workflow/system_workflow_cattle.png" width="850">
+  <img src="Images/workflow/System Workflow_Cattle.png" width="850">
 </p>
 
 The firmware continuously acquires accelerometer data, applies digital filtering, detects chewing events, computes behavioral metrics (CPM and CV), classifies rumination activity, and uploads the processed information to cloud platforms for visualization and storage.
@@ -72,7 +72,7 @@ The firmware continuously acquires accelerometer data, applies digital filtering
 # Hardware Prototype
 
 <p align="center">
-  <img src="images/hardware/prototype_board.png" width="700">
+  <img src="Images/hardware/prototype_board.png" width="700">
 </p>
 
 The prototype integrates:
@@ -88,7 +88,7 @@ The prototype integrates:
 # IoT Dashboard
 
 <p align="center">
-  <img src="images/dashboard/blynk_dashboard_1.png" width="750">
+  <img src="Images/dashboard/blynk_dashboard_1.png" width="750">
 </p>
 
 The Blynk dashboard provides real-time visualization of:
@@ -163,10 +163,10 @@ ESP32-Cattle-Rumination-Monitoring
 
 Detailed project documentation is available below:
 
-- 📖 [Methodology](docs/Methodology.md)
-- 🔧 [PCB Design Report](docs/PCB_Design.md)
-- 📊 [Experimental Results](docs/Results.md)
-- 📚 [Research References](docs/References.md)
+- 📖 [Methodology](Docs/Methodology.md)
+- 🔧 [PCB Design Report](Docs/PCB_Design.md)
+- 📊 [Experimental Results](Docs/Results.md)
+- 📚 [Research References](Docs/References.md)
 
 ---
 
