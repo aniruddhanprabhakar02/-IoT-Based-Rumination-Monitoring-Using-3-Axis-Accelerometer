@@ -139,8 +139,6 @@ ESP32-Cattle-Rumination-Monitoring
 ├── hardware
 │   ├── schematic/
 │   ├── pcb_layout/
-│   ├── custom_symbols/
-│   ├── custom_footprints/
 │   └── gerber_files/
 │
 ├── images
