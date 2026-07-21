@@ -386,7 +386,7 @@ This enables long-term behavioral analysis and record keeping.
 The following workflow illustrates the complete data acquisition, signal processing, rumination classification, and cloud communication pipeline implemented in the developed system.
 
 <p align="center">
-  <img src="Images/workflow/System Workflow_Cattle.png" 
+  <img src="../Images/workflow/System Workflow_Cattle.png" 
   alt="System Workflow" width="850">
 </p>
 
